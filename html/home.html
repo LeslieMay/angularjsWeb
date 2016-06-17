@@ -1,0 +1,87 @@
+<div ng-controller="homeController">
+  <div style="height: 100%">
+  	<!--angular-ui中的轮播图-->
+    <uib-carousel active="active" no-pause="true" interval="myInterval" no-wrap="noWrapSlides">
+      <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+        <img ng-src="{{slide.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <p>{{slide.text}}</p>
+          <a href="javascript::void(0)" class="btn btn-default btn-lg btn_class" ng-click="open()">Log In</a>
+          
+          <a href="javascript::void(0)" class="btn btn-default btn-lg btn_class" style="margin-left: 50px"ng-click="openSign()">Sign In</a>
+        </div>
+      </uib-slide>
+    </uib-carousel>
+  </div>
+</div>
+</div>
+<!--angular-ui中的模态框-->
+<!--登录-->
+    <script type="text/ng-template" id="Login.html">
+        <div class="modal-header">
+            <h3 class="modal-title">登录</h3>
+        </div>
+        <div class="modal-body">
+        	<form class="con_form" name="logForm">
+                <div class="form-group">
+                    <input type="text" name="username" ng-model="username"  ng-class={"form-control":true,"newform-control":username}    required="required">
+                    <label for="username" ng-class={"form_label":true,"newform_label":username} id="labelname" >用户名</label>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="userpwd" ng-model="userpwd" ng-class={"form-control":true,"newform-control":userpwd}  required="required">
+                    <label for="userpwd" ng-class={"form_label":true,"newform_label":userpwd} id="labelpwd">密码</label>
+                </div>
+                <div class="form-group">
+                      <select class="form-control">
+                            <option>老师</option>
+                            <option>学生</option>
+                      </select>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">登录</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">关闭</button>
+        </div>
+    </script>
+    
+<!--注册模态框  有输入验证但是未连接数据库等-->
+    <script type="text/ng-template" id="Sign.html">
+        <div class="modal-header">
+            <h3 class="modal-title">注册</h3>
+        </div>
+        <div class="modal-body">
+        	<form class="con_form" name="SignForm" novalidate>
+            <div class="form-group ">
+                    <input type="text" name="username" ng-model="username" ng-class={"form-control":true,"newform-control":username}>
+                    <label for="username" ng-class={"form_label":true,"newform_label":username} id="labelname" >用户名</label>
+                    <div class="show_msg" ng-show="username.length>20">用户名不能超过20字符！</div>
+            </div>
+            <div class="form-group">
+                <input type="password" name="userpwd" ng-model="userpwd"  ng-class={"form-control":true,"newform-control":userpwd}>
+                <label for="userpwd" ng-class={"form_label":true,"newform_label":userpwd}>密码</label>
+                <div  class="show_msg" ng-show="(userpwd.length<6 || userpwd.length==0)">密码不能小于6个字符或为空！</div>
+            </div>
+            <div class="form-group">
+                <input type="password" name="userpwdagain" ng-model="userpwdagain" ng-class={"form-control":true,"newform-control":userpwdagain}>
+                <label for="userpwdagain" ng-class={"form_label":true,"newform_label":userpwdagain}>确认密码</label>
+                <div class="show_msg" ng-show="userpwd!=userpwdagain">两次密码输入不同！</div>
+            </div>
+            <div class="form-group">
+                <input type="name" name="usertrue" ng-model="usertrue" ng-class={"form-control":true,"newform-control":usertrue}>
+                <label  ng-class={"form_label":true,"newform_label":usertrue}>真实姓名</label>
+                <div class="show_msg" ng-show="usertrue.length>6">请输入真实姓名！</div>
+            </div>
+            <div class="form-group">
+                <input type="text" name="useremail" ng-model="useremail" ng-class={"form-control":true,"newform-control":useremail}>
+                <label  ng-class={"form_label":true,"newform_label":useremail}>电子邮件</label>
+                <div class="show_msg" ng-show="useremail.indexOf('@')<0">请输入正确格式的邮箱！</div>
+            </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="OK()">注册</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">关闭</button>
+        </div>
+    </script>
+    

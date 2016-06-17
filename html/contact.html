@@ -1,0 +1,23 @@
+<div class="contact" ng-controller="contactController">
+	<div class="contact_header">
+		<h1>关于我们</h1>
+		<h2>想了解我们先从这里开始</h2>
+	</div>
+		<div class="contact_content" >
+		<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4 contact_nav">
+			<!--左侧菜单栏-->
+			<ul>
+				<li ng-repeat="x in navList" ng-class={"newlefborder":x.flag} ng-click="setPath(x.id)"><a href="{{x.uri}}">{{x.name}}</a></li>
+			</ul>
+		</div>
+		<div class="col-lg-10 col-md-10 col-sm-8 col-xs-8 contact_show">
+			<!--用angular实现路径导航-->
+			<div class="show_header" ng-show="FlagTotal">
+				<span>关于我们</span><span style="margin-left: 5px;margin-right: 5px;">/</span><span>{{path}}</span>
+			</div>
+			<div class="show_content">
+				<p  ng-show="x.flag" ng-repeat="x in navList">{{x.content}}</p>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,13 @@
+<div class="about" ng-controller="aboutController">
+	<!--右侧按钮导航区域-->
+<ol class="myol">
+	<li ng-repeat="x in listItems"><div ng-class="x.classname" ng-click="setCurindex(x.id);$event.preventDefault();
+		$event.stopPropagation();"></div></li>
+	
+</ol>
+<!--页面大图-->
+<div class="servicepage first"></div>
+<div class="servicepage second"></div>
+<div class="servicepage third"></div>
+<div class="servicepage fourth"></div>
+</div>

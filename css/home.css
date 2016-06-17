@@ -1,0 +1,128 @@
+.carousel-inner,.carousel{
+	height: 100%;
+}
+.carousel-inner img{
+	
+	height: 100vh !important;
+	width: 100vw !important;
+}
+.carousel-caption{
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    width: 90%;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    color: white;
+    max-width: 1170px;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+.carousel-caption>p{
+	font-size: 50px;
+}
+.btn_class{
+	
+	color: white !important;
+	border-color: white !important;
+	background-color: transparent;
+}
+.btn_class:hover{
+	color: #8A6D3B !important;
+}
+
+
+.con_form{
+    width: 80%;
+    margin: 0px auto;
+}
+option{
+    margin: 0px;
+    padding: 0px;
+}
+.form-control{
+    border: none;
+    border-bottom: 1px solid darkgrey;
+    box-shadow: none;
+    border-radius: 0px;
+    margin-top: 20px;
+}
+.form-control:focus{
+    border: none;
+    border-bottom:  1px solid #0099cc;
+    box-shadow: none;
+    border-radius: 0px;
+}
+.newform-control{
+    border-bottom:  1px solid #0099cc;
+}
+.form-group{
+    position: relative;
+}
+.form_label{
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    color: gray;
+
+}
+select,option{
+    font-size: 15px;
+    color:gray;
+}
+select:focus{
+    color: #0099cc;
+}
+.newform_label{
+    animation: anim 0.5s linear;
+    -webkit-animation: anim 0.5s linear;
+    -moz-animation:anim 0.5s linear ;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+.form-control:focus+.form_label{
+    animation: anim 0.5s linear;
+    -webkit-animation: anim 0.5s linear;
+    -moz-animation:anim 0.5s linear ;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+@-webkit-keyframes anim {
+    from{
+        top: 10px;
+        color:gray ;
+        font-size: 15px;
+    }
+    to{
+        top:-10px;
+        color: #0099cc;
+        font-size: 10px;
+
+    }
+}
+@keyframes anim  {
+    from{
+        top: 10px;
+        color:gray ;
+        font-size: 15px;
+    }
+    to{
+        top:-10px;
+        color: #0099cc;
+        font-size: 10px;
+
+    }
+}
+.show_msg{
+	width: auto;
+	color: #cc0001;
+	text-align: center;
+	transition: all 0.5s linear;
+}

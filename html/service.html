@@ -1,0 +1,50 @@
+	
+<!--用angular实现手风琴样式去展示效果，通过设置一个expanded参数控制每一个div的展开或关闭-->
+<div class="service" ng-controller="serviceController">
+	<div ng-class={"cont":true,"first":true,"new-cont":expanded1} ng-click="expanded1=!expanded1">
+		<div ng-class={"con_p":true,"new_p":expanded1}>
+			<h1>系统自动出题</h1>
+		</div>
+		<span ng-class={"glyphicon":true,"glyphicon-remove":true,"new-gl":expanded1} aria-hidden="true"></span>
+		<div ng-class={"nr":true,"new-nr":expanded1}>
+			<p>教师通过注册信息，上传教学内容，即可进行作业发布，实现自动出题，选择题，填空题，主观题一步搞定</p>
+		</div>
+	</div>
+	<div ng-class={"cont":true,"second":true,"new-cont":expanded2} ng-click="expanded2=!expanded2">
+		<div ng-class={"con_p":true,"new_p":expanded2}>
+			<h1>系统自动评分</h1>
+		</div>
+		<span ng-class={"glyphicon":true,"glyphicon-remove":true,"new-gl":expanded2} aria-hidden="true"></span>
+		<div ng-class={"nr":true,"new-nr":expanded2}>
+			<p>学生通过平台登录，完成在线作业，系统即可自动评分，并提供人性化反馈。</p>
+		</div>
+	</div>
+{	<div ng-class={"cont":true,"third":true,"new-cont":expanded3} ng-click="expanded3=!expanded3">
+		<div ng-class={"con_p":true,"new_p":expanded3}>
+			<h1>在线实时协同协作</h1>
+		</div>
+		<span ng-class={"glyphicon":true,"glyphicon-remove":true,"new-gl":expanded3} aria-hidden="true"></span>
+		<div ng-class={"nr":true,"new-nr":expanded3}>
+			<p>系统提供特色化在线实时协同协作功能，教师布置小组作业，学生通过平台即可实时进行协同协作</p>
+		</div>
+	</div>
+	<div ng-class={"cont":true,"fourth":true,"new-cont":expanded4} ng-click="expanded4=!expanded4">
+		<div ng-class={"con_p":true,"new_p":expanded4}>
+			<h1>可视化写作行为分析</h1>
+		</div>
+		<span ng-class={"glyphicon":true,"glyphicon-remove":true,"new-gl":expanded4} aria-hidden="true"></span>
+		<div ng-class={"nr":true,"new-nr":expanded4}>
+			<p>系统提供实时的可视化专注度反馈，学生学习的专注度实时显现，激发学习兴趣，提高学习成绩。</p>
+		</div>
+	</div>
+	<div ng-class={"cont":true,"fifth":true,"new-cont":expanded5} ng-click="expanded5=!expanded5">
+		<div ng-class={"con_p":true,"new_p":expanded5}>
+			<h1>大数据成绩分析</h1>
+		</div>
+		<span ng-class={"glyphicon":true,"glyphicon-remove":true,"new-gl":expanded5} aria-hidden="true"></span>
+		<div ng-class={"nr":true,"new-nr":expanded5}>
+			<p>系统给出精准的可视化大数据成绩分析，教师实时掌握学生的作业完成情况。</p>
+			
+		</div>
+	</div>
+</div>

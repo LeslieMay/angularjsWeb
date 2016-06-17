@@ -1,0 +1,70 @@
+.about{
+	width: 100%;
+	min-height:100%; 
+	position: relative;
+}
+.servicepage{
+	width: 100%;
+	height: 100vh;
+	min-height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+.servicepage.first{
+	background-image: url('../img/xt0.png');
+}
+.servicepage.second{
+	background-image: url('../img/xt2.png');
+}
+.servicepage.third{
+	background-image: url('../img/xt3.png');
+}
+.servicepage.fourth{
+	background-image: url('../img/xt4.png');
+}
+/*设置导航定位*/
+.myol{
+	position: fixed;
+	right: 0px;
+	top: 50%;
+	z-index: 100;
+	transform-origin: center;
+	-webkit-transform-origin: center;
+	-moz-transform-origin: center;
+	-ms-transform-origin: center;
+	-moz-transform-origin: center;
+	-webkit-transform:  translateY(-50%);
+    -moz-transform:  translateY(-50%);
+    -ms-transform:  translateY(-50%);
+    -o-transform:  translateY(-50%);
+    transform:  translateY(-50%);
+}
+ol.myol,ol.myol>li{
+	list-style: none;
+	padding: 10px;
+	
+}
+.ol_div{
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	border: 1px solid cadetblue;
+	background-color: transparent;
+	transform-origin: center;
+	-webkit-transform-origin: center;
+	-moz-transform-origin: center;
+	-ms-transform-origin: center;
+	-moz-transform-origin: center;
+	cursor: pointer;
+	transition: all 0.5s linear;
+}
+/*设置激活导航样式*/
+.activeol_div{
+	transform: scale(1.5);
+	border-radius: 15px;
+	border: 1px solid cadetblue;
+	background-color: cadetblue;
+	cursor: pointer;
+}
