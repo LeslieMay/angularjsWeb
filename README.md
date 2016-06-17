@@ -1,2 +1,4 @@
 # angularjsWeb
 一个公司的笔试题，用angularjs写一个典型页面
+
+项目中用到了angular-route，将各个页面进行分离，每个页面对应相应的控制器，其中还用到了angular-ui当中的轮播图以及模态框等，用angular完成表单的验证以及页面上有些效果的控制.
